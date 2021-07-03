@@ -1,0 +1,19 @@
+{
+  "name": "pdf_tools",
+  "version": "0.0.1",
+  "description": "pdf tools ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharunspi/PDF_Tools.git"
+  },
+  "author": "kksharun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharunspi/PDF_Tools/issues"
+  },
+  "homepage": "https://github.com/sharunspi/PDF_Tools#readme"
+}
