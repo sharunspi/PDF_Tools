@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT || 4023
 const routes = require('./routes')
 const path = require('path')
+const logger = require('morgan')
 // mongo db connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://admin:4dm1nofPDF@pdf.ikxdt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' ,{
     useNewUrlParser:true
@@ -16,7 +17,9 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://admin:4dm1nofPDF@pdf.
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(logger('dev'))
 app.use('/' ,routes)
+
 
 
 if(process.env.NODE_ENV ==='production'){
