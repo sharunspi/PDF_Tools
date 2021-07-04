@@ -2,12 +2,16 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4023
 const routes = require('./routes')
 const path = require('path')
 // mongo db connection
-mongoose.connect(process.env.MONGODB_URI || '' ,{
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://admin:4dm1nofPDF@pdf.ikxdt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' ,{
     useNewUrlParser:true
+}).then(res=>{
+    console.log('connected to mongo db server')
+}).catch(err=>{
+    console.log(err)
 })
 
 app.use(bodyParser.json())
@@ -24,4 +28,4 @@ if(process.env.NODE_ENV ==='production'){
 }
 
 app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(port, () => console.log(`Example app listening on ${port}`))
