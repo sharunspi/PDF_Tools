@@ -6,8 +6,9 @@ const port = process.env.PORT || 4023
 const routes = require('./routes')
 const path = require('path')
 const logger = require('morgan')
+require('dotenv').config()
 // mongo db connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://admin:4dm1nofPDF@pdf.ikxdt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' ,{
+mongoose.connect(process.env.MONGODB_URI ,{
     useNewUrlParser:true
 }).then(res=>{
     console.log('connected to mongo db server')
