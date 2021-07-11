@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import TableData from '../TableData';
 const slides = ['Create', 'Modify', 'Enlarge', 'Overlay']
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -33,7 +34,7 @@ export default function Banner() {
 
     const Cobined = ()=>{
         return <>
-            combined
+            <TableData/>
         </>
     }
     const Overlay = ()=>{
