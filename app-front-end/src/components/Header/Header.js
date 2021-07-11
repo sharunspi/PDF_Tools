@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     title: {
       flexGrow: 1,
     },
+    marginnav:{
+    marginLeft:'24px'
+    }
   }));
 export default function Header() {
     const classes = useStyles();
@@ -27,7 +30,10 @@ export default function Header() {
               PDF Tools
             </Typography>
           
-            <Button color="inherit"> Login/Signup </Button>
+            <Button color="inherit" className={classes.marginnav}> How it works ?</Button>
+            <Button color="inherit" className={classes.marginnav}> Feedback </Button>
+            <Button color='secondary'className={classes.marginnav} variant='contained'> Login / Signup </Button>
+
           </Toolbar>
         </AppBar>
       </div>
