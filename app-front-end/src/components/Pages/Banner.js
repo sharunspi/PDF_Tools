@@ -34,7 +34,7 @@ export default function Banner() {
 
     const Cobined = ()=>{
         return <>
-            <TableData/>
+         table
         </>
     }
     const Overlay = ()=>{
