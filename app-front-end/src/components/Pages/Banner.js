@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
           padding:'20px',
           fontSize:'1.5em',
           marginLeft:'100px'
+      },
+      buttonsCombined:{
+          display:'block'
       }
   }));
 export default function Banner() {
@@ -34,7 +37,8 @@ export default function Banner() {
 
     const Cobined = ()=>{
         return <>
-         table
+         <TableData/>
+         <Button className={classes.buttonCombined} variant='contained' color='primary'>Combine</Button>
         </>
     }
     const Overlay = ()=>{
