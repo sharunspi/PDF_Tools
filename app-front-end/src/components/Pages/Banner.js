@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TableData from '../TableData';
+import {combinePDFs} from '../../API';
 const slides = ['Create', 'Modify', 'Enlarge', 'Overlay']
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -34,11 +35,16 @@ export default function Banner() {
     const [current, setCurrent] = useState(slides[0])
     const [stage,setStage] = useState(1)
     const classes = useStyles();
-
+    const sendCombineRequest = ()=>{
+        let data ={
+            hai:'hais'
+        }
+        combinePDFs(data)
+    }
     const Cobined = ()=>{
         return <>
          <TableData/>
-         <Button className={classes.buttonCombined} variant='contained' color='primary'>Combine</Button>
+         <Button onClick={()=>sendCombineRequest()} className={classes.buttonCombined} variant='contained' color='primary'>Combine</Button>
         </>
     }
     const Overlay = ()=>{
